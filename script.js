@@ -24,5 +24,5 @@ const handleForm = async(e)=>{
 
 function display(name, delay){
 	// output.innerText = `Text: "${name}" \nDelay: ${delay} milliseconds (${delay/1000} seconds)`
-	output.innerText = `${name} - (${delay/1000})`
+	output.innerText = `${name} - ${delay/1000}`
 }
