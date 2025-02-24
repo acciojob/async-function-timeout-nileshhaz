@@ -8,10 +8,10 @@ const handleForm = async(e)=>{
 	const name = document.getElementById("text").value
 	const del = Number(document.getElementById("delay").value)
 
-	if (!name || !delay) {
-	    alert("Please enter both text and delay.");
-	    return;
-	  }
+	// if (!name || !delay) {
+	//     alert("Please enter both text and delay.");
+	//     return;
+	//   }
 	
 	btn.disabled = true;
 	await new Promise((resolve) => setTimeout(resolve, del));
