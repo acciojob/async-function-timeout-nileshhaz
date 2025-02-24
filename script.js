@@ -6,8 +6,7 @@ const handleForm = async(e)=>{
 	e.preventDefault()
 
 	const name = document.getElementById("text").value
-	const del = document.getElementById("delay").value
-	
+	const del = Number(document.getElementById("delay").value)
 
 	if (!name || !delay) {
 	    alert("Please enter both text and delay.");
@@ -15,7 +14,7 @@ const handleForm = async(e)=>{
 	  }
 	
 	btn.disabled = true;
-	await new Promise((resolve) => setTimeout(resolve, del * 1000));
+	await new Promise((resolve) => setTimeout(resolve, del));
 	display(name, del);
 	btn.disabled = false;
 	
@@ -24,5 +23,5 @@ const handleForm = async(e)=>{
 }
 
 function display(name, delay){
-	output.innerText = `Text: "${name}" \nDelay: ${delay*1000} milliseconds (${delay} seconds)`
+	output.innerText = `Text: "${name}" \nDelay: ${delay} milliseconds (${delay/1000} seconds)`
 }
